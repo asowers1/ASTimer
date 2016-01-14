@@ -1,0 +1,6 @@
+framework module Pods_ASTimer_Example {
+  umbrella header "Pods-ASTimer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

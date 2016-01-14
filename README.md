@@ -26,4 +26,4 @@ asowers1, asow123@gmail.com
 
 ## License
 
-ASTimer is available under the MIT license. See the LICENSE file for more info.
+ASTimer is available under the WTFPL license. See the LICENSE file for more info.

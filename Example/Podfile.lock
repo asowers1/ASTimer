@@ -1,0 +1,14 @@
+PODS:
+  - ASTimer (0.1.0)
+
+DEPENDENCIES:
+  - ASTimer (from `../`)
+
+EXTERNAL SOURCES:
+  ASTimer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ASTimer: 76804e5216967cd2f1c7413c2e6c082544457f46
+
+COCOAPODS: 0.39.0

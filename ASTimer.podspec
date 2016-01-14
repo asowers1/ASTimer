@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "ASTimer"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ASTimer."
+  s.summary          = "ASTimer is a convinient timer that will observe NSNotificationCenter noticaitons so it can readjust accordingly."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,14 +17,15 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+ASTimer was created to add a convinient way to manage NSTimers that need to persist over background to foreground state changes or other arbitrarly NSNotificationCenter notifications. You will be able to set the initial start time for the timer, a completion block, and listen to NSNotificationCenter notifications to pasuse/resume the timer.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ASTimer"
+  s.homepage         = "https://github.com/asowers1/ASTimer"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "asowers1" => "asow123@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ASTimer.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/asowers1/ASTimer.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/andrewsowers'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true

@@ -1,0 +1,6 @@
+framework module ASTimer {
+  umbrella header "ASTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
