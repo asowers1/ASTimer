@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A745F13EDA4F86F214284E746E7EE3C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F529CC1004755B5E256258E7A0550CE /* ReplaceMe.swift */; };
 		4490ED27D97CE4F4478CFE4F74A1738D /* Pods-ASTimer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78439B42EEECE22117F20FB17466D311 /* Pods-ASTimer_Tests-dummy.m */; };
+		499EA2571C484875009805F6 /* ASTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EA2561C484875009805F6 /* ASTimer.swift */; };
+		499EA2581C48487E009805F6 /* ASTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EA2561C484875009805F6 /* ASTimer.swift */; };
 		4DFE42A376CD03384B8B85473022F74C /* ASTimer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37BA7F8B4D37E538135D2129E5BEFFBB /* ASTimer.bundle */; };
 		71FB8FF7A4EBCE1390199D42C4887C4F /* ASTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF29B1FE47D03BCFD0703E83734111B7 /* ASTimer-dummy.m */; };
 		7777FAB6D0EA70E4AB6167CDBBE349A5 /* Pods-ASTimer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C33792C4B5322B6CF9B43AD28E3C7A9 /* Pods-ASTimer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F529CC1004755B5E256258E7A0550CE /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		13F827D57FC0BAB9D91221170BCBADF3 /* ASTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ASTimer.modulemap; sourceTree = "<group>"; };
 		187DDFCC75BB97B0669463AABA7F1223 /* Pods-ASTimer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ASTimer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		21922622DD908518DA982A68F83E4BC3 /* Pods-ASTimer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ASTimer_Example.modulemap"; sourceTree = "<group>"; };
@@ -54,6 +54,7 @@
 		384D8C0F320DE99AEDA12E0873DFA09E /* Pods-ASTimer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASTimer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		43BE9D5C27DB1F602C1A1E6C69FEC4D5 /* Pods_ASTimer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASTimer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		499EA2561C484875009805F6 /* ASTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTimer.swift; sourceTree = "<group>"; };
 		54C856C625A0A7DF072BE8FD73361800 /* ASTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASTimer.xcconfig; sourceTree = "<group>"; };
 		5882E12B3963BEFDA80D032C4B2D0082 /* Pods_ASTimer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASTimer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE7F8DEA52EC8061384F3AD5D055CB4 /* ASTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASTimer-umbrella.h"; sourceTree = "<group>"; };
@@ -144,7 +145,7 @@
 		5FB88095F6BFBFB31362C1B43939A3DA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0F529CC1004755B5E256258E7A0550CE /* ReplaceMe.swift */,
+				499EA2561C484875009805F6 /* ASTimer.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -354,7 +355,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -401,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B2369D3223BD7B0EC051534F785024 /* Pods-ASTimer_Example-dummy.m in Sources */,
+				499EA2581C48487E009805F6 /* ASTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71FB8FF7A4EBCE1390199D42C4887C4F /* ASTimer-dummy.m in Sources */,
-				3A745F13EDA4F86F214284E746E7EE3C /* ReplaceMe.swift in Sources */,
+				499EA2571C484875009805F6 /* ASTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54C856C625A0A7DF072BE8FD73361800 /* ASTimer.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -672,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54C856C625A0A7DF072BE8FD73361800 /* ASTimer.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
