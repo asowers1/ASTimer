@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11EBC8D34DD5634241D281A06FA79E3D /* ASTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF7B8D64314236AA24AF7AFD42EBF5 /* ASTimer.swift */; };
 		4490ED27D97CE4F4478CFE4F74A1738D /* Pods-ASTimer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78439B42EEECE22117F20FB17466D311 /* Pods-ASTimer_Tests-dummy.m */; };
-		499EA2571C484875009805F6 /* ASTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EA2561C484875009805F6 /* ASTimer.swift */; };
-		499EA2581C48487E009805F6 /* ASTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EA2561C484875009805F6 /* ASTimer.swift */; };
 		4DFE42A376CD03384B8B85473022F74C /* ASTimer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37BA7F8B4D37E538135D2129E5BEFFBB /* ASTimer.bundle */; };
-		71FB8FF7A4EBCE1390199D42C4887C4F /* ASTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF29B1FE47D03BCFD0703E83734111B7 /* ASTimer-dummy.m */; };
 		7777FAB6D0EA70E4AB6167CDBBE349A5 /* Pods-ASTimer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C33792C4B5322B6CF9B43AD28E3C7A9 /* Pods-ASTimer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99E0852B32C9D8E5155F9F3ACC254780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		B386D2D6B0C2C85A85D7F26B4C3D8F86 /* ASTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7F8DEA52EC8061384F3AD5D055CB4 /* ASTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0B2369D3223BD7B0EC051534F785024 /* Pods-ASTimer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02E5AFFF7D042504919151DA2527D5 /* Pods-ASTimer_Example-dummy.m */; };
 		C347FC2242B7487157FE03F65FADD954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D0EF5E057C8169E87D23EE97AB09F285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		EF22A1C515A951D2DC51F7E8ACE78255 /* ASTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF29B1FE47D03BCFD0703E83734111B7 /* ASTimer-dummy.m */; };
 		F545387477B1CB75D35BC6A23A345A2E /* Pods-ASTimer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 691AAA98B04FB6F906D5D1F9B0749CD9 /* Pods-ASTimer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,12 +48,12 @@
 		13F827D57FC0BAB9D91221170BCBADF3 /* ASTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ASTimer.modulemap; sourceTree = "<group>"; };
 		187DDFCC75BB97B0669463AABA7F1223 /* Pods-ASTimer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ASTimer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		21922622DD908518DA982A68F83E4BC3 /* Pods-ASTimer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ASTimer_Example.modulemap"; sourceTree = "<group>"; };
+		27AF7B8D64314236AA24AF7AFD42EBF5 /* ASTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASTimer.swift; sourceTree = "<group>"; };
 		3081CDD429AB7B246F76EFEB5BF05D0F /* Pods-ASTimer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASTimer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		37BA7F8B4D37E538135D2129E5BEFFBB /* ASTimer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASTimer.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		384D8C0F320DE99AEDA12E0873DFA09E /* Pods-ASTimer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASTimer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		43BE9D5C27DB1F602C1A1E6C69FEC4D5 /* Pods_ASTimer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASTimer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		499EA2561C484875009805F6 /* ASTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTimer.swift; sourceTree = "<group>"; };
 		54C856C625A0A7DF072BE8FD73361800 /* ASTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASTimer.xcconfig; sourceTree = "<group>"; };
 		5882E12B3963BEFDA80D032C4B2D0082 /* Pods_ASTimer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASTimer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE7F8DEA52EC8061384F3AD5D055CB4 /* ASTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASTimer-umbrella.h"; sourceTree = "<group>"; };
@@ -142,14 +141,6 @@
 			path = "Target Support Files/Pods-ASTimer_Example";
 			sourceTree = "<group>";
 		};
-		5FB88095F6BFBFB31362C1B43939A3DA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				499EA2561C484875009805F6 /* ASTimer.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +155,7 @@
 		925D00B7AE28F75E4114C013589E8A86 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				5FB88095F6BFBFB31362C1B43939A3DA /* Classes */,
+				EC058517111468BD7AB0F54394524240 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -221,6 +212,14 @@
 				43BE9D5C27DB1F602C1A1E6C69FEC4D5 /* Pods_ASTimer_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EC058517111468BD7AB0F54394524240 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27AF7B8D64314236AA24AF7AFD42EBF5 /* ASTimer.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		ED5FD3BD0EC88980EF197133235942A4 /* Support Files */ = {
@@ -334,7 +333,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B530E30FCD807C2F9EBCCDD824391F /* Build configuration list for PBXNativeTarget "ASTimer" */;
 			buildPhases = (
-				5147B8B02D0605E0095EBB6386D45293 /* Sources */,
+				6DD063B8DFC02A5F3835553ACC98A981 /* Sources */,
 				9AEE531243AC09083D30BC7B07A1DF94 /* Frameworks */,
 				2C65FB6E70DFE57B33A480B0E3A9CF29 /* Resources */,
 				A3D8EC9A310B90C319398110F2214B9E /* Headers */,
@@ -355,8 +354,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -402,7 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B2369D3223BD7B0EC051534F785024 /* Pods-ASTimer_Example-dummy.m in Sources */,
-				499EA2581C48487E009805F6 /* ASTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +411,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5147B8B02D0605E0095EBB6386D45293 /* Sources */ = {
+		6DD063B8DFC02A5F3835553ACC98A981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71FB8FF7A4EBCE1390199D42C4887C4F /* ASTimer-dummy.m in Sources */,
-				499EA2571C484875009805F6 /* ASTimer.swift in Sources */,
+				EF22A1C515A951D2DC51F7E8ACE78255 /* ASTimer-dummy.m in Sources */,
+				11EBC8D34DD5634241D281A06FA79E3D /* ASTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +519,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ASTimer_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -548,6 +547,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -590,6 +590,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ASTimer_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -604,7 +605,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54C856C625A0A7DF072BE8FD73361800 /* ASTimer.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -619,6 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ASTimer/ASTimer.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ASTimer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -650,6 +651,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ASTimer_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -675,7 +677,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54C856C625A0A7DF072BE8FD73361800 /* ASTimer.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -690,6 +691,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ASTimer/ASTimer.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ASTimer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -720,6 +722,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ASTimer_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

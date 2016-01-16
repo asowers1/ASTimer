@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ASTimer: NSObject {
-  
+public class ASTimer: NSObject {
   
   //mark - instance variables
   var timerName: String = String()
-  var expirationTime: Int = 0
+  var expirationTime: NSTimeInterval = 0
   
   // you must define these
   var completionBlock: (() -> Void)?
@@ -22,13 +21,23 @@ class ASTimer: NSObject {
   
   //mark methods
   
-  override init() {
+  public override init() {
     super.init()
-    self.intervalTimer = NSTimer(timeInterval: 1.0, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
-
+    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
+  }
+  
+  public init(interval:NSTimeInterval) {
+    super.init()
+    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
+  }
+  
+  public init(interval:NSTimeInterval, target:AnyObject, selector:Selector, userInfo:AnyObject, repeats:Bool) {
+    super.init()
+    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: target, selector: selector, userInfo: userInfo, repeats: repeats)
+    
   }
   // build a new timer
-  func timer(name:String, expirationTime:Int, completionBlock: (() -> Void)?) -> ASTimer {
+  public func timer(name:String, expirationTime:NSTimeInterval, completionBlock: (() -> Void)?) -> ASTimer {
     let timer = ASTimer()
     timer.timerName = name
     timer.expirationTime = expirationTime
@@ -37,9 +46,11 @@ class ASTimer: NSObject {
   }
     
   func checkExpiration() -> Void {
+    print("Checking expiration time")
     if let startTime:NSDate = timerStartTime {
       let currentDate = NSDate()
-      let timePassed: Int = Int(currentDate.timeIntervalSinceDate(startTime))
+      let timePassed: NSTimeInterval = currentDate.timeIntervalSinceDate(startTime)
+      print("time passed: \(timePassed) with an expiration time of: \(self.expirationTime)")
       if timePassed > self.expirationTime {
         self.invalidateTimer()
         if let block = completionBlock{
@@ -49,15 +60,18 @@ class ASTimer: NSObject {
     }
   }
   
-  func fireTimer() -> Void {
+  public func fireTimer() -> Void {
     self.timerStartTime = self.timerStartTime != nil ? self.timerStartTime : NSDate()
+    self.intervalTimer?.fire()
   }
   
-  func invalidateTimer() -> Void {
+  public func invalidateTimer() -> Void {
     self.intervalTimer?.invalidate()
+    self.intervalTimer = nil
   }
   
   deinit {
+    print("\(self.timerName) is being deinitialized")
     self.invalidateTimer()
   }
   

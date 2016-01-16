@@ -10,18 +10,28 @@ import UIKit
 import ASTimer
 
 class ViewController: UIViewController {
-
-  let asTimer: ASTimer = ASTimer()
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+  var asTimer:ASTimer?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let now = NSDate()
+    let timeInterval: NSTimeInterval = 60*1
+    let secondslater = now.dateByAddingTimeInterval(timeInterval) // some seconds as a time intrval
+    
+    asTimer = ASTimer().timer("Test Timer", expirationTime: secondslater.timeIntervalSinceDate(now), completionBlock: {(Void) -> (Void) in
+      print("Hey, it's been \(timeInterval/60) seconds")
+    })
+    
+    asTimer?.fireTimer() // we need to fire the timer to start it
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+  }
+  
+  
+  
 }
 
