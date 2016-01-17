@@ -9,7 +9,7 @@
 import UIKit
 import ASTimer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ASTimerDelegate {
   
   var asTimer:ASTimer?
   
@@ -23,15 +23,48 @@ class ViewController: UIViewController {
       print("Hey, it's been \(timeInterval/60) seconds")
     })
     
-    asTimer?.fireTimer() // we need to fire the timer to start it
+    // we can listen for timer ticks via the delegate
+    asTimer?.delegate = self
+    
+//    Some Example notifications to listen for:
+//    
+//    UIApplicationBackgroundRefreshStatusDidChangeNotification
+//    UIApplicationDidBecomeActiveNotification
+//    UIApplicationDidChangeStatusBarFrameNotification
+//    UIApplicationDidChangeStatusBarOrientationNotification
+//    UIApplicationDidEnterBackgroundNotification
+//    UIApplicationDidFinishLaunchingNotification
+//    UIApplicationDidReceiveMemoryWarningNotification
+//    UIApplicationProtectedDataDidBecomeAvailable
+//    UIApplicationProtectedDataWillBecomeUnavailable
+//    UIApplicationSignificantTimeChangeNotification
+//    UIApplicationUserDidTakeScreenshotNotification
+//    UIApplicationWillChangeStatusBarOrientationNotification
+//    UIApplicationWillChangeStatusBarFrameNotification
+//    UIApplicationWillEnterForegroundNotification
+//    UIApplicationWillResignActiveNotification
+//    UIApplicationWillTerminateNotification
+//    UIContentSizeCategoryDidChangeNotification
+//    
+//    Source: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/
+    
+    // This will always start the timer if it's not already
+    asTimer?.observeStartNotification("UIApplicationDidBecomeActiveNotification")
+    
+    // This will always stop the timer if it's not already
+    asTimer?.observeStopNotification("UIApplicationDidEnterBackgroundNotification")
+    
+    // for debugging purposes
+    asTimer?.debugMode = false // false by default
+    
+    // we fire the timer to start it, but you fire a notification of your choice to do the same thing
+    asTimer?.fireTimer()
+  
   }
   
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-
+  func timerDidFire(timerName: String?, timeRemaining: NSTimeInterval) {
+    print("the timer \(timerName as String!) has \(timeRemaining) seconds left")
   }
-  
-  
   
 }
 

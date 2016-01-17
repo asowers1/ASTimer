@@ -8,49 +8,74 @@
 
 import UIKit
 
+public protocol ASTimerDelegate {
+  func timerDidFire(timerName:String?, timeRemaining: NSTimeInterval)
+}
+
 public class ASTimer: NSObject {
   
-  //mark - instance variables
-  var timerName: String = String()
+  //MARK: private instance variables
+  var timerName: String? = String()
+  var timerInterval: NSTimeInterval = 1
   var expirationTime: NSTimeInterval = 0
-  
-  // you must define these
-  var completionBlock: (() -> Void)?
-  var timerStartTime: NSDate?
   var intervalTimer: NSTimer?
+  var activeNotificationIdentifiers = [String]()
+  var completionBlock: (() -> Void)?
   
-  //mark methods
+  //Mark: public instance variables
+  public var debugMode = false
+  public var delegate: ASTimerDelegate?
+  public var timerStartTime: NSDate?
   
-  public override init() {
-    super.init()
-    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
-  }
+  //MARK: methods
   
-  public init(interval:NSTimeInterval) {
-    super.init()
-    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
-  }
-  
-  public init(interval:NSTimeInterval, target:AnyObject, selector:Selector, userInfo:AnyObject, repeats:Bool) {
-    super.init()
-    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: target, selector: selector, userInfo: userInfo, repeats: repeats)
-    
-  }
-  // build a new timer
+  //builds a new timer
   public func timer(name:String, expirationTime:NSTimeInterval, completionBlock: (() -> Void)?) -> ASTimer {
     let timer = ASTimer()
     timer.timerName = name
     timer.expirationTime = expirationTime
     timer.completionBlock = completionBlock
+    timer.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
     return timer
   }
-    
+  
+  //MARK: notifications
+  
+  public func observeStartNotifications(notifications:[String]) -> Void {
+    for notification:String in notifications {
+      if let unwrappedNotification:String = notification {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetTimer", name: unwrappedNotification, object: nil)
+      }
+    }
+  }
+  
+  public func observeStartNotification(notification:String) -> Void {
+    self.observeStartNotifications([notification])
+  }
+  
+  public func observeStopNotifications(notifications:[String]) -> Void {
+    for notification:String in notifications {
+      if let unwrappedNotification:String = notification {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "invalidateTimer", name: unwrappedNotification, object: nil)
+      }
+    }
+  }
+  
+  public func observeStopNotification(notification:String) -> Void {
+    self.observeStopNotifications([notification])
+  }
+  
+  //MARK: timer functions
+  
   func checkExpiration() -> Void {
-    print("Checking expiration time")
     if let startTime:NSDate = timerStartTime {
       let currentDate = NSDate()
       let timePassed: NSTimeInterval = currentDate.timeIntervalSinceDate(startTime)
-      print("time passed: \(timePassed) with an expiration time of: \(self.expirationTime)")
+      if debugMode {
+        print("time passed: \(timePassed) with an expiration time of: \(self.expirationTime)")
+      }
+      self.delegate?.timerDidFire(self.timerName, timeRemaining: self.expirationTime - timePassed)
+      
       if timePassed > self.expirationTime {
         self.invalidateTimer()
         if let block = completionBlock{
@@ -65,13 +90,20 @@ public class ASTimer: NSObject {
     self.intervalTimer?.fire()
   }
   
+  func resetTimer() -> Void {
+    self.invalidateTimer()
+    self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(self.timerInterval, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
+  }
+  
   public func invalidateTimer() -> Void {
     self.intervalTimer?.invalidate()
     self.intervalTimer = nil
   }
   
   deinit {
-    print("\(self.timerName) is being deinitialized")
+    if self.debugMode {
+      print("\(self.timerName) is being deinitialized")
+    }
     self.invalidateTimer()
   }
   
