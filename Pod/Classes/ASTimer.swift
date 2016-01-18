@@ -74,13 +74,13 @@ public class ASTimer: NSObject {
       if debugMode {
         print("time passed: \(timePassed) with an expiration time of: \(self.expirationTime)")
       }
-      self.delegate?.timerDidFire(self.timerName, timeRemaining: self.expirationTime - timePassed)
-      
       if timePassed > self.expirationTime {
         self.invalidateTimer()
         if let block = completionBlock{
           block()
         }
+      } else {
+        self.delegate?.timerDidFire(self.timerName, timeRemaining: self.expirationTime - timePassed)
       }
     }
   }

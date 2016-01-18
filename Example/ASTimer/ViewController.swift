@@ -13,14 +13,28 @@ class ViewController: UIViewController, ASTimerDelegate {
   
   var asTimer:ASTimer?
   
+  @IBOutlet weak var timeRemainingLabel: UILabel!
+  @IBOutlet weak var countdownFinishedImageView: UIImageView!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     let now = NSDate()
-    let timeInterval: NSTimeInterval = 60*1
+    let timeInterval: NSTimeInterval = 10 // ten seconds
+    
     let secondslater = now.dateByAddingTimeInterval(timeInterval) // some seconds as a time intrval
     
+    let images = self.animationsImages()
+    
+    self.countdownFinishedImageView.animationImages = images
+    self.countdownFinishedImageView.animationDuration = 1
+    
     asTimer = ASTimer().timer("Test Timer", expirationTime: secondslater.timeIntervalSinceDate(now), completionBlock: {(Void) -> (Void) in
-      print("Hey, it's been \(timeInterval/60) seconds")
+      
+      self.countdownFinishedImageView.startAnimating()
+      self.timeRemainingLabel.text = "Happy New Year!"
+      print("Hey, it's been \(timeInterval) seconds! Happy New Year!")
+      
     })
     
     // we can listen for timer ticks via the delegate
@@ -62,8 +76,19 @@ class ViewController: UIViewController, ASTimerDelegate {
   
   }
   
+  // load some images for our example animation that occurs when the timer completion closure is executed
+  func animationsImages() -> [UIImage] {
+    var images = [UIImage]()
+    for index in 0 ... 66 {
+      images.insert(UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("sparkler_\(index)",ofType:"png")!)!, atIndex: index)
+    }
+    return images
+  }
+  
+  
   func timerDidFire(timerName: String?, timeRemaining: NSTimeInterval) {
-    print("the timer \(timerName as String!) has \(timeRemaining) seconds left")
+    self.timeRemainingLabel.text = "\(round(timeRemaining)) seconds!"
+    print("the timer \(timerName as String!) has \(round(timeRemaining)) seconds left")
   }
   
 }

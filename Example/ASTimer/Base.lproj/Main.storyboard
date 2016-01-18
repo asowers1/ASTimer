@@ -14,13 +14,68 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Years Eve Countdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-pu-n7T">
+                                <rect key="frame" x="82" y="68" width="210" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Mwh-d2-7XE"/>
+                                    <constraint firstAttribute="width" constant="210" id="SDT-j6-Y8i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-fA-j78">
+                                <rect key="frame" x="67" y="214" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="BnU-fN-ymq"/>
+                                    <constraint firstAttribute="width" constant="240" id="jcp-wV-0gW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get ready..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tJ-bg-SKj">
+                                <rect key="frame" x="82" y="130" width="210" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="9rG-e2-ew6"/>
+                                    <constraint firstAttribute="height" constant="21" id="Mdv-hu-zmZ"/>
+                                    <constraint firstAttribute="width" constant="210" id="w5t-CQ-t00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9rG-e2-ew6"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6a1-pu-n7T" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="48" id="EhB-lg-Etf"/>
+                            <constraint firstItem="KTJ-fA-j78" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Esg-lu-EHz"/>
+                            <constraint firstItem="KTJ-fA-j78" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="FTX-A3-6qn"/>
+                            <constraint firstItem="2tJ-bg-SKj" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="FeN-ko-8Mj"/>
+                            <constraint firstItem="KTJ-fA-j78" firstAttribute="top" secondItem="2tJ-bg-SKj" secondAttribute="bottom" constant="63" id="RcI-0d-CXh"/>
+                            <constraint firstItem="2tJ-bg-SKj" firstAttribute="top" secondItem="6a1-pu-n7T" secondAttribute="bottom" constant="41" id="isF-kl-1Ef"/>
+                            <constraint firstItem="6a1-pu-n7T" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="xYE-uL-RDi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Esg-lu-EHz"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="countdownFinishedImageView" destination="KTJ-fA-j78" id="q3j-aW-MYR"/>
+                        <outlet property="timeRemainingLabel" destination="2tJ-bg-SKj" id="LgI-Uz-khN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339.5" y="273.5"/>
         </scene>
     </scenes>
 </document>

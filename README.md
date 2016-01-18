@@ -11,6 +11,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+## Demonstration
+
+![alt tag](https://raw.github.com/asowers1/ASTimer/example.png)
+
 ## Installation
 
 ASTimer is available through [CocoaPods](http://cocoapods.org). To install
