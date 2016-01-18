@@ -30,7 +30,6 @@ class ViewController: UIViewController, ASTimerDelegate {
     self.countdownFinishedImageView.animationDuration = 1
     
     asTimer = ASTimer().timer("Test Timer", expirationTime: secondslater.timeIntervalSinceDate(now), completionBlock: {(Void) -> (Void) in
-      
       self.countdownFinishedImageView.startAnimating()
       self.timeRemainingLabel.text = "Happy New Year!"
       print("Hey, it's been \(timeInterval) seconds! Happy New Year!")
