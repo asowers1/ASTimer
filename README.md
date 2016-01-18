@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/ASTimer.svg?style=flat)](http://cocoapods.org/pods/ASTimer)
 [![Platform](https://img.shields.io/cocoapods/p/ASTimer.svg?style=flat)](http://cocoapods.org/pods/ASTimer)
 
+ASTimer is a Swift based convenience library for NSTimer. ASTimer allows you to set timer completion closures, listen to timer ticks via its delegate, set names for your timers so you can differentiate them easily if you’re running more than one, and listen to NSNotificationCenter notifications to stop/restart the timer. Please feel free to submit a PR or issue.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
