@@ -90,21 +90,25 @@ public class ASTimer: NSObject {
     self.intervalTimer?.fire()
   }
   
+  // this will reset your timer
   func resetTimer() -> Void {
     self.invalidateTimer()
     self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(self.timerInterval, target: self, selector: "checkExpiration", userInfo: nil, repeats: true)
   }
   
+  // this will invalidate your timer and halt its ticking
   public func invalidateTimer() -> Void {
     self.intervalTimer?.invalidate()
     self.intervalTimer = nil
   }
   
+  // cleanup
   deinit {
     if self.debugMode {
       print("\(self.timerName) is being deinitialized")
     }
     self.invalidateTimer()
+    NSNotificationCenter.defaultCenter().removeObserver(self)
   }
   
 }
