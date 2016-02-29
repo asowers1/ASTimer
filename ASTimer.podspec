@@ -22,7 +22,7 @@ ASTimer was created to add a convinient way to manage NSTimers that need to pers
 
   s.homepage         = "https://github.com/asowers1/ASTimer"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'WTFPL'
+  s.license          = 'MIT'
   s.author           = { "asowers1" => "asow123@gmail.com" }
   s.source           = { :git => "https://github.com/asowers1/ASTimer.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/andrewsowers'
