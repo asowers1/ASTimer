@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ASTimer"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "ASTimer is a convinient timer that will observe NSNotificationCenter noticaitons so it can readjust accordingly."
 
 # This description is used to generate tags and improve search results.
